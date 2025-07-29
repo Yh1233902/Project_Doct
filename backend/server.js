@@ -1,6 +1,7 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const cors = require('cors');
+const path = require('path'); // ✅ أضف هذا
 const { readDB, writeDB, generateID } = require('./utils');
 
 const app = express();
@@ -8,6 +9,9 @@ const PORT = 3000;
 
 app.use(cors());
 app.use(bodyParser.json());
+
+// ✅ هذه السطرين لعرض واجهة المستخدم frontend
+app.use(express.static(path.join(__dirname, '../frontend')));
 
 // تسجيل دكتور
 app.post('/api/register-doctor', (req, res) => {
