@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>عيادتي | E.YHC</title>
+  <!-- خط عربي جميل -->
+  <link href="https://fonts.googleapis.com/css2?family=Cairo&display=swap" rel="stylesheet" />
+  <!-- أيقونات Font Awesome -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    integrity="sha512-papbBZX3Rt1u1pyu9zGnXg+7Y0aOH0xhQkE0+9FVyM3T48ytW4cN1U7bdYdDQHQDG1+j5d2ThcDwBrBuHykHVQ=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  />
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Cairo', sans-serif;
+      /* أضف الخلفية النمطية */
+      background-image: url('https://www.transparenttextures.com/patterns/diagmonds.png');
+      background-repeat: repeat;
+      background-color: #c2e9fb; /* لون أساسي مناسب للنمط */
+      color: #004d40;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      overflow-x: hidden;
+    }
+    header {
+      position: fixed;
+      top: 0;
+      right: 0;
+      width: 100%;
+      background: #00796b;
+      padding: 1rem 2rem;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      z-index: 1000;
+    }
+    .logo {
+      font-size: 1.8rem;
+      font-weight: 900;
+      color: white;
+      user-select: none;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .logo i {
+      font-size: 2.4rem;
+      color: #80deea;
+      transform: rotate(20deg);
+    }
+    main {
+      padding: 8rem 1.5rem 2rem;
+      max-width: 700px;
+      width: 100%;
+      text-align: center;
+    }
+    main h1 {
+      font-size: 3rem;
+      margin-bottom: 0.3rem;
+      font-weight: 800;
+      color: #004d40;
+      text-shadow: 1px 1px 4px #b2dfdb;
+    }
+    main p {
+      font-size: 1.3rem;
+      margin-bottom: 2rem;
+      color: #00695cdd;
+      font-weight: 600;
+    }
+    .buttons {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+    .btn {
+      background: linear-gradient(135deg, #00796b, #004d40);
+      color: white;
+      padding: 1.2rem 2.5rem;
+      font-size: 1.2rem;
+      border: none;
+      border-radius: 12px;
+      cursor: pointer;
+      font-weight: 700;
+      box-shadow: 0 6px 15px rgba(0, 77, 64, 0.4);
+      transition: background 0.3s ease, transform 0.2s ease;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      user-select: none;
+    }
+    .btn i {
+      font-size: 1.5rem;
+    }
+    .btn:hover {
+      background: linear-gradient(135deg, #004d40, #00251a);
+      transform: translateY(-3px);
+      box-shadow: 0 10px 20px rgba(0, 77, 64, 0.6);
+    }
+    footer {
+      margin-top: auto;
+      padding: 1rem 0;
+      width: 100%;
+      background-color: #004d40;
+      color: #a7ffeb;
+      font-weight: 600;
+      text-align: center;
+      user-select: none;
+      box-shadow: inset 0 1px 4px rgba(255,255,255,0.15);
+    }
+    /* رسومات طبية في الخلفية (شفافة وخفيفة) */
+    body::before {
+      content: "\f0f1 \f21e \f7a1 \f5d1"; /* unicode icons from font awesome */
+      font-family: "Font Awesome 6 Free";
+      font-weight: 900;
+      font-size: 200px;
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: rgba(0, 77, 64, 0.05);
+      user-select: none;
+      pointer-events: none;
+      z-index: 0;
+      white-space: nowrap;
+    }
+    @media (max-width: 600px) {
+      main h1 {
+        font-size: 2.2rem;
+      }
+      .btn {
+        font-size: 1rem;
+        padding: 1rem 1.8rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">
+      <i class="fa-solid fa-stethoscope"></i>
+      E.YHC
+    </div>
+  </header>
+  <main>
+    <h1>مرحباً بك في عيادتي الإلكترونية</h1>
+    <p>نوفر لك خدمات طبية متكاملة مع سهولة في التسجيل والحجز.</p>
+    <div class="buttons">
+      <button class="btn" onclick="location.href='registerDoctor.html'">
+        <i class="fa-solid fa-user-doctor"></i> تسجيل طبيب جديد
+      </button>
+      <button class="btn" onclick="location.href='registerPatient.html'">
+        <i class="fa-solid fa-user"></i> تسجيل مريض جديد
+      </button>
+      <button class="btn" onclick="location.href='login.html'">
+        <i class="fa-solid fa-right-to-bracket"></i> تسجيل الدخول
+      </button>
+    </div>
+  </main>
+  <footer>
+    © 2025 E.YHC - جميع الحقوق محفوظة
+  </footer>
+</body>
+</html>
